@@ -1,0 +1,19 @@
+server:
+  port: 8112
+
+spring:
+  application:
+    name: dsh-java-nginx
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          no-cache: true
+  jackson:
+    default-property-inclusion: non_null
+
+dsh:
+  nginx:
+    data-directory: ${user.home}/.dsh-java-nginx
+    harness:
+      base-url: ${DSH_HARNESS_BASE_URL:http://127.0.0.1:8090}
